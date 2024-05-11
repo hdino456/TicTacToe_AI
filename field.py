@@ -59,11 +59,18 @@ class board():
         else:
             self.player = "Player 1"
     pass
- 
+
+    def referree(self):        
+        if self.board[1] == self.board[2]==self.board[3]=='X':
+            print("player 1 wins")
+            
+        
+           
 board = board()   
 while True:
     board.chose_player()
     board.print_board()
     board.move()
+    board.referree()
     board.switch_players()
     
